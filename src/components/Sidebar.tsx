@@ -26,7 +26,10 @@ export default function Sidebar() {
                 href={item.href}
                 className="flex items-center gap-4 px-4 py-3 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-all group"
               >
-                <item.icon size={20} className="group-hover:text-brand transition-colors" />
+                <item.icon
+                  size={20}
+                  className="group-hover:text-brand transition-colors"
+                />
                 <span className="font-medium">{item.name}</span>
               </a>
             </li>
@@ -36,13 +39,22 @@ export default function Sidebar() {
 
       <div className="p-8 border-t border-white/5">
         <div className="flex items-center gap-4">
-          <a href="#" className="text-white/40 hover:text-brand transition-colors">
+          <a
+            href="https://github.com/leonrd01"
+            className="text-white/40 hover:text-brand transition-colors"
+          >
             <Github size={20} />
           </a>
-          <a href="#" className="text-white/40 hover:text-brand transition-colors">
+          <a
+            href="www.linkedin.com/in/leonardopinh0"
+            className="text-white/40 hover:text-brand transition-colors"
+          >
             <Linkedin size={20} />
           </a>
-          <a href="#" className="text-white/40 hover:text-brand transition-colors">
+          <a
+            href="https://www.instagram.com/dev.leonrd/"
+            className="text-white/40 hover:text-brand transition-colors"
+          >
             <Instagram size={20} />
           </a>
         </div>
