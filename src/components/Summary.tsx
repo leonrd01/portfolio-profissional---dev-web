@@ -101,7 +101,7 @@ export default function Summary() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4">
+                  <div className="absolute inset-0 bg-bg-dark/60 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity duration-500 flex items-center justify-center gap-4">
                     <a href={project.link} className="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center hover:bg-brand-dark transition-colors">
                       <ExternalLink size={20} />
                     </a>

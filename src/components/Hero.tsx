@@ -14,7 +14,7 @@ export default function Hero() {
       />
       
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-bg-dark/50 to-bg-dark" />
+      <div className="absolute inset-0 z-0 bg-linear-to-b from-transparent via-bg-dark/50 to-bg-dark" />
 
       <div className="relative z-10 max-w-4xl">
         <motion.div
