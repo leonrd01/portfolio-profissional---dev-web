@@ -3,6 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { useEffect, useRef } from "react";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "./firebaseConfig";
 import Sidebar from "./components/Sidebar";
 import MobileNav from "./components/MobileNav";
 import Hero from "./components/Hero";
@@ -13,6 +16,19 @@ import Contact from "./components/Contact";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 export default function App() {
+  const hasLoggedRef = useRef(false);
+
+  useEffect(() => {
+    if (hasLoggedRef.current) return;
+    hasLoggedRef.current = true;
+
+    logEvent(analytics, "page_view", {
+      page_path: window.location.pathname,
+      page_location: window.location.href,
+      page_title: document.title,
+    });
+  }, []);
+
   return (
     <div className="flex min-h-screen bg-bg-dark text-white selection:bg-brand selection:text-white">
       {/* Navigation */}
