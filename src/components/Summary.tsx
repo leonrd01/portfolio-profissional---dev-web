@@ -36,7 +36,7 @@ const projects = [
       "Typescript",
     ],
     image: logoGestor,
-    link: "projetoes-14c61.web.app",
+    link: "https://projetoes-14c61.web.app/",
     github: "https://github.com/leonrd01/gestor-de-notas-escolares",
   },
   {
@@ -53,8 +53,7 @@ const projects = [
       "Firebase Firestore",
       "Lucid React",
     ],
-    image:
-      fotoTaba,
+    image: fotoTaba,
     link: "https://brisaf-fab37.web.app",
     github: "https://github.com/leonrd01/BrisaFuertOfc",
   },
@@ -73,11 +72,16 @@ const technologies = [
 
 export default function Summary() {
   return (
-    <section id="summary" className="py-24 px-6 md:px-12 lg:px-24 bg-bg-dark relative">
+    <section
+      id="summary"
+      className="py-24 px-6 md:px-12 lg:px-24 bg-bg-dark relative"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="mb-24">
           <div className="mb-16">
-            <span className="text-brand font-bold uppercase tracking-widest text-sm mb-4 block">Portfólio</span>
+            <span className="text-brand font-bold uppercase tracking-widest text-sm mb-4 block">
+              Portfólio
+            </span>
             <h2 className="text-4xl md:text-6xl font-display font-black tracking-tighter mb-8 leading-tight">
               MEUS <span className="text-brand">PROJETOS</span>
             </h2>
@@ -95,17 +99,23 @@ export default function Summary() {
                 className="glass-card rounded-3xl overflow-hidden group border border-white/5 hover:border-brand/30 transition-all duration-500"
               >
                 <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
+                  <img
+                    src={project.image}
+                    alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-bg-dark/60 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity duration-500 flex items-center justify-center gap-4">
-                    <a href={project.link} className="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center hover:bg-brand-dark transition-colors">
+                    <a
+                      href={project.link}
+                      className="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center hover:bg-brand-dark transition-colors"
+                    >
                       <ExternalLink size={20} />
                     </a>
-                    <a href={project.github} className="w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors">
+                    <a
+                      href={project.github}
+                      className="w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors"
+                    >
                       <Github size={20} />
                     </a>
                   </div>
@@ -119,12 +129,20 @@ export default function Summary() {
                       Em desenvolvimento
                     </span>
                   )}
+                  {project.title === "PeriffApp" && (
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand/10 text-brand text-xs font-bold uppercase tracking-widest border border-brand/30 mb-4">
+                      Em Manuntenção
+                    </span>
+                  )}
                   <p className="text-white/60 mb-8 text-lg leading-relaxed">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((t) => (
-                      <span key={t} className="px-3 py-1 rounded-full bg-white/5 text-white/40 text-xs font-bold uppercase tracking-widest border border-white/5">
+                      <span
+                        key={t}
+                        className="px-3 py-1 rounded-full bg-white/5 text-white/40 text-xs font-bold uppercase tracking-widest border border-white/5"
+                      >
                         {t}
                       </span>
                     ))}
@@ -137,7 +155,9 @@ export default function Summary() {
 
         <div>
           <div className="mb-16">
-            <span className="text-brand font-bold uppercase tracking-widest text-sm mb-4 block">Stack</span>
+            <span className="text-brand font-bold uppercase tracking-widest text-sm mb-4 block">
+              Stack
+            </span>
             <h2 className="text-4xl md:text-6xl font-display font-black tracking-tighter mb-8 leading-tight">
               TECNOLOGIAS <span className="text-brand">QUE USO</span>
             </h2>
@@ -154,7 +174,10 @@ export default function Summary() {
                 transition={{ delay: index * 0.05, duration: 0.5 }}
                 className="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-brand/30 hover:bg-brand/5 transition-all duration-300 group"
               >
-                <tech.icon size={32} className="text-white/20 group-hover:text-brand transition-colors duration-300" />
+                <tech.icon
+                  size={32}
+                  className="text-white/20 group-hover:text-brand transition-colors duration-300"
+                />
                 <span className="text-xs font-bold uppercase tracking-widest text-white/40 group-hover:text-white transition-colors duration-300">
                   {tech.name}
                 </span>

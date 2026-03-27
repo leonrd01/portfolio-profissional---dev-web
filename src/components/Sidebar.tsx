@@ -41,18 +41,24 @@ export default function Sidebar() {
         <div className="flex items-center gap-4">
           <a
             href="https://github.com/leonrd01"
+            target="_blank"
+            rel="noreferrer"
             className="text-white/40 hover:text-brand transition-colors"
           >
             <Github size={20} />
           </a>
           <a
-            href="www.linkedin.com/in/leonardopinh0"
+            href="https://www.linkedin.com/in/leonardopinh0/"
+            target="_blank"
+            rel="noreferrer"
             className="text-white/40 hover:text-brand transition-colors"
           >
             <Linkedin size={20} />
           </a>
           <a
             href="https://www.instagram.com/dev.leonrd/"
+            target="_blank"
+            rel="noreferrer"
             className="text-white/40 hover:text-brand transition-colors"
           >
             <Instagram size={20} />
